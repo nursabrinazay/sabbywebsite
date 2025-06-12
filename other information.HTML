@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sabby's Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("bg3.png");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: top center;
+            background-size: cover;
+            padding-bottom: 50px;
+        }
+
+        .large-text {
+            font-size: 1.3em;
+        }
+
+        header {
+            background-color: #FFF0F5;
+            color: Plum;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #FFF0F5;
+            text-align: center;
+            padding: 10px 0;
+            opacity: 0.9;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #FF69B4;
+            font-weight: bold;
+        }
+
+        nav button {
+            padding: 5px 10px;
+            border: none;
+            background-color: #FF69B4;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border: 1px solid #000;
+            border-radius: 8px;
+            background-color: #F9F9F9;
+            text-align: center;
+            opacity: 0.95;
+        }
+
+        section p {
+            margin: 10px 0;
+        }
+
+        img {
+            height: 200px;
+            width: auto;
+            margin: 10px;
+            border-radius: 10px;
+            border: 3px solid #FF69B4;
+            box-shadow: 0 0 12px #FF69B4;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px #FF1493, 0 0 40px #FF69B4;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #FFF0F5;
+            color: Plum;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>⋆˚✿˖° 𝓢𝓐𝓑𝓑𝓨'𝓢 ⋆˚✿˖°</h1>
+</header>
+
+<nav>
+    <a href="index1.html">ABOUT ME</a>
+    <a href="education.html">EDUCATION</a>
+    <a href="family.html">FAMILY TREE ZAY'S FAMILY</a>
+    <a href="experience.html">EXPERIENCE</a>
+    <a href="gallery.html">GALLERY</a>
+    <a href="other-information.html">EXOTIC ANIMALS</a>
+    <a href="game.html">GAME</a>
+
+    <button onclick="toggleLargeText()">Toggle Large Text</button>
+</nav>
+
+<section>
+        <center>
+            <h2>EXOTICS ANIMALS</h2>
+
+            <p>I love exotic animals because they are unique, fascinating and unlike anything I see every day.</p>
+            <p>Their striking colors, rare behaviors and connection to distant parts of the world make them feel mysterious</p>
+            <p>and special. They challenge you to learn more and see nature in a new way and they stand out.</p>
+            <p>There's something exciting about observing creatures that seem almost otherworldly and they inspire me to learn</p>
+            <p>more about conservation and the world beyond my own. Their rarity makes them feel even more</p>
+            <p>special and meaningful.</p>
+
+            <img src="oe2.jpg"height=200px" width=200px">
+            <img src="oe1.jpg"height=200px" width=300px">
+            <img src="oe4.jpg"height=200px" width=200px">
+        </center>
+    </section>
+
+<footer>
+    <p>Created with love by SabbyMeow, 2025</p>
+</footer>
+
+<script>
+    function toggleLargeText() {
+        document.body.classList.toggle("large-text");
+    }
+</script>
+
+</body>
+</html>

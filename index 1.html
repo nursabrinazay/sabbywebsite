@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sabby's Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("bg3.png");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: top center;
+            background-size: cover;
+        }
+
+        .large-text {
+            font-size: 1.3em;
+        }
+
+        header {
+            background-color: #FFF0F5;
+            color: Plum;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #FFF0F5;
+            text-align: center;
+            padding: 10px 0;
+            opacity: 0.8;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #FF69B4;
+            font-weight: bold;
+        }
+
+        nav form {
+            display: inline-block;
+            margin-left: 15px;
+        }
+
+        nav input[type="text"] {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        nav button {
+            padding: 5px 10px;
+            border: none;
+            background-color: #FF69B4;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        #clock-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        #clock {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #FF69B4;
+        }
+
+        #date {
+            font-size: 1.2rem;
+            color: #FF69B4;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1000px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            background-color: #F9F9F9;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            opacity: 0.95;
+        }
+
+        .about-text {
+            flex: 2;
+        }
+
+        .about-images {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .about-images img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid #FF69B4;
+            box-shadow: 0 0 15px #FF69B4;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            animation: float 3s ease-in-out infinite;
+            cursor: pointer;
+            object-fit: cover;
+        }
+
+        .about-images img:hover {
+            transform: scale(1.2);
+            box-shadow: 0 0 40px #ff1493, 0 0 60px #ff69b4;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0); }
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #FFF0F5;
+            color: Plum;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        .game-link {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .game-link img {
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            width: 160px;
+        }
+
+        .game-link img:hover {
+            transform: scale(1.08);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>⋆˚✿˖° 𝓢𝓐𝓑𝓑𝓨'𝓢 ⋆˚✿˖°</h1>
+</header>
+
+<nav>
+    <a href="index1.html">ABOUT ME</a>
+    <a href="education.html">EDUCATION</a>
+    <a href="family.html">FAMILY TREE ZAY'S FAMILY</a>
+    <a href="experience.html">EXPERIENCE</a>
+    <a href="gallery.html">GALLERY</a>
+    <a href="other-information.html">EXOTIC ANIMALS</a>
+    <a href="game.html">GAME</a>
+
+    <!-- Search Box -->
+    <form id="search-form" onsubmit="return searchFunction()">
+        <input type="text" id="search-box" placeholder="Search...">
+        <button type="submit">Go</button>
+    </form>
+
+    <!-- Toggle Large Text -->
+    <button onclick="toggleLargeText()">Toggle Large Text</button>
+</nav>
+
+<div id="clock-container">
+    <div id="clock"></div>
+    <div id="date"></div>
+</div>
+
+<section>
+    <div class="about-text">
+         <h2>About Me</h2>
+    <p>
+        I was born on December 9, 2004, at Hospital Razif Klang. I currently live in Bukit Tinggi, Klang a charming and peaceful place I proudly call home. From an early age, I've been deeply curious about the world around me and this curiosity has fueled my passion for learning and personal growth.
+    </p>
+    <p>
+        My dream is to become a lecturer one day, where I can inspire others through knowledge and help shape bright futures. Outside of academics, I love watching movies, especially horror films. Their suspense and thrill captivate me, offering an exciting escape. I also enjoy films with meaningful stories that touch the heart and spark reflection.
+    </p>
+    <p>
+        Family plays a central role in my life. I am the youngest of five siblings, with three brothers and one sister. Growing up as the youngest has taught me patience and gratitude for the guidance and support my older siblings provide. Both my parents were born in Perak and most of my siblings were too, except for my third brother, who was born in Penang and I was born in Selangor which each of us carrying a unique thread in our family tapestry.
+    </p>
+    <p>
+        We cherish our family gatherings, where laughter, stories and love fill the air. These moments remind me of the strength that comes from connection and shared memories. I strive to work hard and succeed, not only to fulfill my own dreams but to honor and give back to my family.
+    </p>
+    <p>
+        Beyond my studies and hobbies, I am committed to continuous self-improvement. Life is a journey of learning and I welcome every opportunity to grow whether through reading, exploring new places or meeting new people. Every day, I aim to become a better, wiser and kinder version of myself.
+    </p>
+    </div>
+
+    <div class="about-images">
+        <img src="me1.jpg" alt="Me 1">
+        <img src="me2.jpg" alt="Me 2">
+        <img src="me3.jpg" alt="Me 3">
+    </div>
+</section>
+
+<footer>
+    <p>Created with love by SabbyMeow, 2025</p> 
+</footer>
+
+<script>
+    function updateClock() {
+        const now = new Date();
+        const time = now.toLocaleTimeString();
+        const date = now.toLocaleDateString('en-GB', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+
+        document.getElementById('clock').textContent = time;
+        document.getElementById('date').textContent = date;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock(); 
+
+    // Search Function
+    function searchFunction() {
+        const query = document.getElementById('search-box').value.toLowerCase();
+
+        if (query.includes("about")) {
+            window.location.href = "index1.html";
+        } else if (query.includes("education")) {
+            window.location.href = "education.html";
+        } else if (query.includes("family")) {
+            window.location.href = "family.html";
+        } else if (query.includes("game")) {
+            window.location.href = "game.html";
+        } else if (query.includes("experience")) {
+            window.location.href = "experience.html";
+        } else if (query.includes("gallery")) {
+            window.location.href = "gallery.html";
+        } else if (query.includes("animal") || query.includes("exotic")) {
+            window.location.href = "other-information.html";
+        } else {
+            alert("No matching content found.");
+        }
+
+        return false; 
+    }
+
+    // Toggle Large Text
+    function toggleLargeText() {
+        document.body.classList.toggle("large-text");
+    }
+</script>
+
+</body>
+</html>

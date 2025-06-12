@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sabby's Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url("bg3.png");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: top center;
+      background-size: cover;
+      padding-bottom: 50px;
+      text-align: center;
+    }
+    header {
+      background-color: #FFF0F5;
+      color: Plum;
+      padding: 20px;
+    }
+    nav {
+      background-color: #FFF0F5;
+      padding: 10px 0;
+      opacity: 0.8;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #FF69B4;
+      font-weight: bold;
+    }
+    section {
+      padding: 20px;
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: #F9F9F9;
+      border: 1px solid #000;
+      border-radius: 5px;
+      opacity: 0.95;
+    }
+    .score, .timer {
+      font-size: 1.2em;
+      color: #800080;
+      margin: 10px 0;
+    }
+    .butterfly {
+      position: absolute;
+      width: 80px;
+      cursor: pointer;
+      animation: popIn 0.3s ease;
+      transition: transform 0.2s;
+      z-index: 999;
+    }
+    .butterfly:hover {
+      transform: scale(1.2);
+    }
+    @keyframes popIn {
+      from { transform: scale(0); }
+      to { transform: scale(1); }
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #FFF0F5;
+      color: Plum;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      margin-top: 40px;
+        }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>⋆˚✿˖° 𝓢𝓐𝓑𝓑𝓨'𝓢 ⋆˚✿˖°</h1>
+</header>
+
+<nav>
+  <a href="index1.html">ABOUT ME</a>
+  <a href="education.html">EDUCATION</a>
+  <a href="family.html">FAMILY TREE ZAY'S FAMILY</a>
+  <a href="experience.html">EXPERIENCE</a>
+  <a href="gallery.html">GALLERY</a>
+  <a href="other-information.html">EXOTIC ANIMALS</a>
+  <a href="game.html">GAME</a>
+</nav>
+
+<section>
+  <p class="score">Score: <span id="score">0</span></p>
+  <p class="timer">Time Left: <span id="time">60</span>s</p>
+  <button onclick="startGame()">Start Game</button>
+</section>
+
+<audio id="popSound" src="pop.mp3" preload="auto"></audio>
+
+<script>
+  let score = 0, timeLeft = 30;
+  const scoreEl = document.getElementById('score');
+  const timeEl = document.getElementById('time');
+  const popSound = document.getElementById('popSound');
+  let gameInterval, timerInterval;
+
+  function createButterfly() {
+    if (timeLeft <= 0) return;
+    const b = document.createElement('img');
+    b.src = 'butterfly.png'; 
+    b.className = 'butterfly';
+    const size = 30 + Math.random() * 40;
+    b.style.width = size + 'px';
+    b.style.top = Math.random() * (window.innerHeight - size - 100) + 'px';
+    b.style.left = Math.random() * (window.innerWidth - size) + 'px';
+    b.onclick = function() {
+      score++;
+      scoreEl.textContent = score;
+      popSound.play();
+      b.remove();
+    };
+    document.body.appendChild(b);
+    setTimeout(() => b.remove(), 3000);
+  }
+
+  function startGame() {
+    score = 0;
+    timeLeft = 30;
+    scoreEl.textContent = score;
+    timeEl.textContent = timeLeft;
+
+    clearInterval(gameInterval);
+    clearInterval(timerInterval);
+
+    gameInterval = setInterval(createButterfly, 1200);
+    timerInterval = setInterval(() => {
+      timeLeft--;
+      timeEl.textContent = timeLeft;
+      if (timeLeft <= 0) {
+        clearInterval(gameInterval);
+        clearInterval(timerInterval);
+        setTimeout(() => alert("Time's up! Your score: " + score), 100);
+      }
+    }, 1000);
+  }
+</script>
+
+<center>
+<div class="game-link">
+    <a target="_blank" href="https://www.y8.com/games/melon_maker_fruit">
+        <img src="https://img.y8.com/cloud/v2-y8-thumbs-small-thumbnails-001/196391/small.gif" alt="Melon Maker: Fruit"><br>
+        Melon Maker: Fruit<br>Play Now!
+    </a>
+</div>
+</center>
+
+<footer>
+  <p>Created with love by SabbyMeow, 2025</p>
+</footer>
+
+</body>
+</html>

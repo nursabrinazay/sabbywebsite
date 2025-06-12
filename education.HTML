@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sabby's Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("bg3.png");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: top center;
+            background-size: cover;
+            padding-bottom: 50px;
+        }
+        header {
+            background-color: #FFF0F5;
+            color: Plum;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #FFF0F5;
+            text-align: center;
+            padding: 10px 0;
+            opacity: 0.8;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #FF69B4;
+            font-weight: bold;
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            background-color: #F9F9F9;
+            text-align: center;
+            opacity: 0.9;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #FFF0F5;
+            color: Plum;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .education-card {
+            width: 22%;
+            /* Removed blue box */
+            background-color: transparent;
+            margin: 10px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .education-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 0 10px rgba(255, 105, 180, 0.3); /* subtle pink shadow */
+        }
+        .education-card img:hover {
+            transform: scale(1.05);
+        }
+        .caption {
+            margin-top: 10px;
+        }
+        .school-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .duration {
+            font-style: italic;
+        }
+        @media screen and (max-width: 768px) {
+            .education-card {
+                width: 45%;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .education-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>⋆˚✿˖° 𝓢𝓐𝓑𝓑𝓨'𝓢 ⋆˚✿˖°</h1>
+</header>
+
+<nav>
+    <a href="index1.html">ABOUT ME</a>
+    <a href="education.html">EDUCATION</a>
+    <a href="family.html">FAMILY TREE ZAY'S FAMILY</a>
+    <a href="experience.html">EXPERIENCE</a>
+    <a href="gallery.html">GALLERY</a>
+    <a href="other-information.html">EXOTICS ANIMALS</a>
+    <a href="game.html">GAME</a>
+</nav>
+
+<section>
+    <h2>MY EDUCATION TIMELINE 💻📖📝</h2>
+    <div class="container">
+
+        <div class="education-card">
+            <a href="https://maps.app.goo.gl/pv1i1yUzp8867V2c6" target="_blank">
+                <img src="ed1.jpg" alt="Tadika Adam & Eve's">
+            </a>
+            <div class="caption">
+                <div class="school-name">TADIKA ADAM & EVE'S</div>
+                <div class="duration">2009 - 2010</div>
+            </div>
+        </div>
+
+        <div class="education-card">
+            <a href="https://maps.app.goo.gl/xtKTMf5hnExyTkgG6" target="_blank">
+                <img src="ed2.jpg" alt="Sekolah Kebangsaan Bukit Tinggi">
+            </a>
+            <div class="caption">
+                <div class="school-name">SEKOLAH KEBANGSAAN BUKIT TINGGI</div>
+                <div class="duration">2011 - 2016</div>
+            </div>
+        </div>
+
+        <div class="education-card">
+            <a href="https://maps.app.goo.gl/CgC8rVnMNagVpduy9" target="_blank">
+                <img src="ed3.jpg" alt="Sekolah Menengah Batu Unjur">
+            </a>
+            <div class="caption">
+                <div class="school-name">SEKOLAH MENENGAH BATU UNJUR</div>
+                <div class="duration">2017 - 2020</div>
+            </div>
+        </div>
+
+        <div class="education-card">
+            <a href="https://maps.app.goo.gl/iyD7KdP5fbBMXY9H9" target="_blank">
+                <img src="ed4.jpg" alt="UiTM Machang Kelantan">
+            </a>
+            <div class="caption">
+                <div class="school-name">UITM MACHANG KELANTAN</div>
+                <div class="duration">2023 - NOW</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>Created with love by SabbyMeow, 2025</p>
+</footer>
+
+</body>
+</html>

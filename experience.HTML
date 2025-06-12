@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Experience - Sabby's Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("bg3.png");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: top center;
+            background-size: cover;
+            padding-bottom: 50px;
+        }
+
+        header {
+            background-color: #FFF0F5;
+            color: Plum;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #FFF0F5;
+            text-align: center;
+            padding: 10px 0;
+            opacity: 0.8;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #FF69B4;
+            font-weight: bold;
+        }
+
+        nav button {
+            padding: 5px 10px;
+            border: none;
+            background-color: #FF69B4;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            background-color: #F9F9F9;
+            text-align: center;
+            opacity: 0.95;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #FFF0F5;
+            color: Plum;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10px;
+            object-fit: cover;
+            box-shadow: 0 0 10px #ff69b4;
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        /*  Flower Emoji Animation */
+        .emoji-flower {
+            position: fixed;
+            top: -40px;
+            font-size: 24px;
+            pointer-events: none;
+            animation: fallEmoji linear infinite;
+            z-index: 9999;
+        }
+
+        @keyframes fallEmoji {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>⋆˚✿˖° 𝓢𝓐𝓑𝓑𝓨'𝓢 ⋆˚✿˖°</h1>
+</header>
+
+<nav>
+    <a href="index1.html">ABOUT ME</a>
+    <a href="education.html">EDUCATION</a>
+    <a href="family.html">FAMILY TREE ZAY'S FAMILY</a>
+    <a href="experience.html">EXPERIENCE</a>
+    <a href="gallery.html">GALLERY</a>
+    <a href="other-information.html">EXOTIC ANIMALS</a>
+    <a href="game.html">GAME</a>
+
+<!-- Toggle Large Text Button -->
+    <button onclick="toggleLargeText()">Toggle Large Text</button>
+</nav>
+
+<section>
+<center>
+<H3>INTERNSHIP AT COLUMBIA ASIA HOSPITAL</H3>
+
+<p>I start my Internship at Columbia Asia Hospital Bukit Rimau on 10 February until 4 April. I work at medical <br>
+<p>records department. It was a great experience learning how to handle records. Such as checking, scanning,<br>
+<p>sorting and filing. In 2 months, I have learn so much from them which is the assistant of medical records.<br>
+<p>They guide me and patiently teach me about medical records.</p>
+
+<img src="exp1.jpg"height=200px"width=200px">
+ </section>  
+ </center>
+
+ <section>
+ <center> 
+<H3>MODELLING FOR PYJAMAS</H3>
+
+<p>In 2023, I got the opportunity to do modelling for Thoobelas pyjamas.</p>
+<p>It was a great experience because it help me with my self esteem and gain my confident.</p>
+
+<img src="exp2.jpg"height=200px"width=200px">
+</section>
+</center>
+
+<footer>
+    <p>Created with love by SabbyMeow, 2025</p>
+</footer>
+
+<!-- Flower Emoji Script -->
+<script>
+    const emojis = ['🌸', '🌼', '🌺', '🌷'];
+
+    function createEmojiFlower() {
+        const emoji = document.createElement('div');
+        emoji.className = 'emoji-flower';
+        emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+        emoji.style.left = Math.random() * 100 + 'vw';
+        emoji.style.animationDuration = (3 + Math.random() * 2) + 's';
+        emoji.style.fontSize = (20 + Math.random() * 20) + 'px';
+        document.body.appendChild(emoji);
+        setTimeout(() => emoji.remove(), 6000);
+    }
+
+    setInterval(createEmojiFlower, 400);
+</script>
+
+<script>
+    function toggleLargeText() {
+        document.body.classList.toggle("large-text");
+    }
+</script>
+
+</body>
+</html>
